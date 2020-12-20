@@ -12,19 +12,19 @@ there should be space for 12 patterns in the eeprom, the way the patterns are cu
 
 Currently, before this code will work you must first set the eeprom of your chip to this repeating pattern:
 
-(block of 16 for each pattern you want avaliable)
-' ' (ascii byte for space)
-0.0 (float value 0)
+*(block of 16 for each pattern you want avaliable)
+*' ' (ascii byte for space)
+*0.0 (float value 0)
 
-' ' (ascii byte for space)
-0.0 (float value 0)
-.
-.
-. 
-ect.
+*' ' (ascii byte for space)
+*0.0 (float value 0)
+*.
+*.
+*. 
+*ect.
 
 TODO:
-  change from buzzer to DAC sound generation (when i have the parts to make it)
-  give each pattern its own button
-  get a potentiometer that can be used to change tempo 
-  get the custom character feature of the LCD display to work
+ * change from buzzer to DAC sound generation (when i have the parts to make it)
+ * give each pattern its own button
+ * get a potentiometer that can be used to change tempo 
+ * get the custom character feature of the LCD display to work
