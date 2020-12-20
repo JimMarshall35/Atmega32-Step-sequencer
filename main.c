@@ -14,7 +14,8 @@ int main(void)
     while (1) 
     {
 		if (pollPushBtn()){
-			changeLEDS();
+			changeLEDS();                // change LEDS and set onSequence to a new value
+			initSequence();              // load the new sequence and update LCD with it
 			_delay_ms(LOCK_INPUT_TIME);
 		}
 		int8_t  c = RotaryGetStatus();
@@ -142,9 +143,9 @@ void changeLEDS(){
 	onSequence = LEDNo;
 	lcdSendCommand(CLEAR_SCREEN_CMD);
 	_delay_ms(10);
-	initSequence();
+	
 }
-ISR(TIMER0_OVF_vect){
+ISR(TIMER0_OVF_vect){         // timer0 overflow is used to advance the sequencer
 	timer0OverFlows++;
 	if(timer0OverFlows > bpm_overflowCount){
 		timer0OverFlows = 0;

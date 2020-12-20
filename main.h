@@ -39,7 +39,7 @@ typedef struct{
 const Note scale[] ={{' ', 0.0},{'b', 246.94},{'c', 261.63},{'d', 293.66},{'e', 329.63},{'f',  349.23},{'g',  392.00}, {'a',440.0}};
 
 Note sequence[LCD_ROW_LENGTH];
-Note sequence1[LCD_ROW_LENGTH] = {{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0}};
+Note sequence1[LCD_ROW_LENGTH]; // empty of notes it would be = {{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0},{' ',0.0}};
 Note sequence2[LCD_ROW_LENGTH];
 Note* sequences[] = {sequence,sequence1,sequence2};
 	
@@ -50,7 +50,7 @@ volatile char sequencerPlayhead = 0;        // which note is sequencer currently
 volatile unsigned int timer0OverFlows = 0;  // current number of timer0 overflows at scalefactor 256 
 
 int bpm_overflowCount;                      // number of overflows at scalefactor 256 before next note is moved to.
-uint8_t bpm = 180;
+uint8_t bpm = 160;
 signed char cursorPos = 0;  
 unsigned char onSequence = 0;
 
