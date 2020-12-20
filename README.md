@@ -10,25 +10,17 @@ This current design has three different patterns which are saved in eeprom and s
 
 there should be space for 12 patterns in the eeprom, the way the patterns are currently stored.
 
-Currently, before this code will work you must first set the eeprom of your chip to this repeating pattern:
+Currently, before this code in its entirity will work you must first set the eeprom of your chip to this repeating pattern:
 
 (block of 16 for each pattern you want avaliable)
 
-' ' (ascii byte for space)
+(ascii byte for space)
 
-0.0 (float value 0)
+(float value 0)
 
-' ' (ascii byte for space)
+(repeated * 16) 
 
-0.0 (float value 0)
 
-.
-
-.
-
-. 
-
-ect.
 
 This repository is an Atmel studio 7 project
 
