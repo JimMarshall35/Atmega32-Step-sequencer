@@ -1,6 +1,6 @@
 # Atmega32-Step-sequencer
 
-This is code in AVR C for a step sequencer using a standard lcd screen module, a rotary encoder with a push button, a buzzer, a button and three (or more) LEDs.
+This is C code for a step sequencer using a standard lcd screen module, a rotary encoder with a push button, a buzzer, a button and three (or more) LEDs.
 
 The sequence and playhead is displayed on the LCD screen and the notes are changeable using the rotary encoders push button.
 
