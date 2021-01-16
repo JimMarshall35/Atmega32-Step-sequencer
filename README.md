@@ -29,3 +29,5 @@ TODO:
  * give each pattern its own button
  * get a potentiometer that can be used to change tempo 
  * get the custom character feature of the LCD display to work
+ * minimise number of eeprom reads / updates
+ 
